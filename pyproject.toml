@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "trustme_cli"
+author = "Seth Michael Larson"
+author-email = "sethmichaellarson@gmail.com"
+home-page = "https://github.com/sethmlarson/trustme-cli"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.6"
+requires = ["trustme"]
+
+[tool.flit.scripts]
+trustme-cli = "trustme_cli:main"
