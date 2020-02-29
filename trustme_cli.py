@@ -8,7 +8,7 @@ import os
 import sys
 
 __all__ = ["main"]
-__version__ = "2019.11.6"
+__version__ = "2020.2.28"
 
 
 def main(argv: typing.Sequence[str] = None) -> None:
