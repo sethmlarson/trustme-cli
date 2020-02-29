@@ -52,11 +52,12 @@ def main(argv: typing.Sequence[str] = None) -> None:
     cert_dir = pathlib.Path(args.dir)
     if not cert_dir.is_dir():
         raise ValueError(f"--dir={cert_dir} is not a directory")
+    common_name = args.common_name[0] if args.common_name else None
 
     # Generate the CA certificate
     trustme._KEY_SIZE = args.key_size
     ca = trustme.CA()
-    cert = ca.issue_cert(*args.identities, common_name=args.common_name)
+    cert = ca.issue_cert(*args.identities, common_name=common_name)
 
     # Write the certificate and private key the server should use
     server_key = cert_dir / "server.key"
