@@ -16,7 +16,6 @@ def main(argv: typing.Sequence[str] = None) -> None:
     parser.add_argument(
         "-d",
         "--dir",
-        nargs=1,
         default=os.getcwd(),
         help="Directory where certificates and keys are written to. Defaults to cwd",
     )
